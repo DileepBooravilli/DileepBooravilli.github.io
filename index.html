@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dileep Booravilli — Advanced Software Engineer</title>
+  <meta name="description"
+    content="Portfolio of Dileep Booravilli, an Advanced Software Engineer at Honeywell with 5+ years of experience in full-stack development, GenAI frameworks, and vision SDKs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Cursor trail canvas -->
+  <canvas id="cursor-canvas"></canvas>
+
+  <!-- Floating particles background -->
+  <div id="particles"></div>
+
+  <!-- Sticky Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-brand">
+      <span class="brand-bracket">&lt;</span>DB<span class="brand-bracket"> /&gt;</span>
+    </div>
+    <div class="nav-links">
+      <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </div>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#hero" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#achievements" class="mobile-link">Achievements</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting scrolly typewriter" data-delay="200">Hello, I'm</p>
+          <h1 class="hero-name scrolly typewriter" data-delay="400">
+            <span class="name-gradient">Dileep Booravilli</span>
+          </h1>
+          <div class="hero-title-wrapper scrolly typewriter" data-delay="600">
+            <span class="hero-title-prefix">&gt;</span>
+            <span class="hero-title" id="typed-title"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+          <p class="hero-location scrolly typewriter" data-delay="800">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Bangalore, India
+          </p>
+          <div class="hero-cta scrolly" data-delay="1000">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator scrolly" data-delay="1200">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about" class="section about-section">
+      <div class="section-container">
+        <div class="section-label scrolly typewriter" data-delay="0">
+          <span class="label-number">01.</span> About Me
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-lead scrolly typewriter" data-delay="100">
+              Software engineer with <span class="highlight">5+ years</span> of experience building production-grade
+              systems — from <span class="highlight">multi-platform vision SDKs</span> powering enterprise devices to
+              <span class="highlight">GenAI platforms</span> with RAG pipelines serving real-world use cases.
+            </p>
+            <p class="about-body scrolly typewriter" data-delay="200">
+              I specialize in turning complex requirements into scalable, maintainable solutions. My work at Honeywell
+              has resulted in <span class="highlight">2 patent filings</span>, a <span class="highlight">$2M contract
+                win</span>, and a successful product demo at NRF New York 2025. I lead a team of 5 engineers and thrive
+              at the intersection of AI, cloud infrastructure, and product delivery.
+            </p>
+          </div>
+          <div class="about-stats scrolly" data-delay="400">
+            <div class="stat-card">
+              <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="2">0</span>
+              <span class="stat-label">Patents Filed</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="2">0</span><span class="stat-plus">M$</span>
+              <span class="stat-label">Contract Secured</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-count="40">0</span><span class="stat-plus">%</span>
+              <span class="stat-label">Faster Inference</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS SECTION ========== -->
+    <section id="skills" class="section skills-section">
+      <div class="section-container">
+        <div class="section-label scrolly typewriter" data-delay="0">
+          <span class="label-number">02.</span> Tech Stack
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category scrolly" data-delay="100">
+            <div class="skill-category-header">
+              <div class="skill-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <h3>Languages & Frameworks</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">C#</span>
+              <span class="skill-tag">C / C++</span>
+              <span class="skill-tag">.NET Core</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Spring Boot</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">ReactJS</span>
+            </div>
+          </div>
+          <div class="skill-category scrolly" data-delay="200">
+            <div class="skill-category-header">
+              <div class="skill-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 10h-4V4a2 2 0 0 0-4 0v6H6a2 2 0 0 0 0 4h4v6a2 2 0 0 0 4 0v-6h4a2 2 0 0 0 0-4z" />
+                </svg>
+              </div>
+              <h3>Cloud, Data & DevOps</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Azure</span>
+              <span class="skill-tag">Containers</span>
+              <span class="skill-tag">Functions</span>
+              <span class="skill-tag">AKS</span>
+              <span class="skill-tag">APIM</span>
+              <span class="skill-tag">Databricks</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">gRPC</span>
+              <span class="skill-tag">Kafka</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Milvus</span>
+              <span class="skill-tag">Chroma</span>
+            </div>
+          </div>
+          <div class="skill-category scrolly" data-delay="300">
+            <div class="skill-category-header">
+              <div class="skill-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                </svg>
+              </div>
+              <h3>AI / ML & Vision</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">LLMs / VLMs</span>
+              <span class="skill-tag">RAG Pipelines</span>
+              <span class="skill-tag">Vector Search</span>
+              <span class="skill-tag">Deep Learning</span>
+              <span class="skill-tag">OCR (Tesseract, PaddleOCR)</span>
+              <span class="skill-tag">MLKit</span>
+              <span class="skill-tag">TensorFlow</span>
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">YOLO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE SECTION ========== -->
+    <section id="experience" class="section experience-section">
+      <div class="section-container">
+        <div class="section-label scrolly typewriter" data-delay="0">
+          <span class="label-number">03.</span> Experience
+        </div>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-item scrolly" data-delay="100">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Advanced Software Engineer</h3>
+                  <p class="timeline-company">Honeywell Technology Solutions — PSS R&D</p>
+                </div>
+                <span class="timeline-date">Feb 2026 — Present</span>
+              </div>
+              <ul class="timeline-details">
+                <li>Architected scalable microservices on <strong>AKS</strong> using <strong>.NET Core, Spring Boot, and
+                    FastAPI</strong> for high-throughput operations</li>
+                <li>Co-developed Enterprise GenAI framework with <strong>RAG pipelines</strong> (Azure AI, Databricks)
+                  for multimodal data extraction and visual search</li>
+                <li>Evaluated and integrated various <strong>LLMs, VLMs, and vector databases</strong> to optimize
+                  latency, cost, and model performance</li>
+                <li>Orchestrated asynchronous processing using API gateways, <strong>gRPC, and Kafka</strong> to ensure
+                  system resilience</li>
+                <li>Led a team of engineers — driving technical decisions, code reviews, and authoring <strong>2 patent
+                    filings</strong></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item scrolly" data-delay="200">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Software Engineer II</h3>
+                  <p class="timeline-company">Honeywell Technology Solutions</p>
+                </div>
+                <span class="timeline-date">Aug 2020 — Jan 2026</span>
+              </div>
+              <ul class="timeline-details">
+                <li>Built multi-platform vision SDKs featuring item classification, barcode scanning,
+                  <strong>OCR</strong>, AR overlays, and <strong>3D dimensioning</strong></li>
+                <li>Deployed deep learning vision models on GPU-accelerated mobile devices — achieving <strong>40%
+                    faster inference</strong> over CPU</li>
+                <li>Maintained and enhanced legacy IP-protected <strong>C/C++ codebases</strong> while building rapid
+                  prototypes for custom AI/vision customer solutions</li>
+                <li>Led a high-stakes customer demo of parcel dimensioners to <strong>La Poste, Paris</strong>, securing
+                  a <strong>$2M recurring contract</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section id="projects" class="section projects-section">
+      <div class="section-container">
+        <div class="section-label scrolly typewriter" data-delay="0">
+          <span class="label-number">03.</span> Featured Projects
+        </div>
+        <div class="projects-grid">
+
+          <div class="project-card scrolly" data-delay="100">
+            <div class="project-card-glow"></div>
+            <div class="project-number">01</div>
+            <div class="project-badge">Enterprise</div>
+            <h3 class="project-title">Honeywell Intelligence — GenAI Framework</h3>
+            <p class="project-subtitle">PSS Catalyst Fabric</p>
+            <p class="project-desc">Enterprise GenAI platform powering product search, customer Q&A, workflow guidance,
+              and visual analytics across Honeywell's productivity portfolio.</p>
+            <ul class="project-highlights">
+              <li>End-to-end RAG pipelines with multimodal data extraction agents</li>
+              <li>Microservices on AKS — Data Ingestion, Chat, Insights, Agent Management</li>
+              <li>Evaluated LLMs/VLMs across Device, Edge, and Cloud for optimal cost-latency tradeoffs</li>
+            </ul>
+            <div class="project-tags">
+              <span>Azure AI</span><span>Databricks</span><span>.NET Core</span><span>Docker</span><span>AKS</span>
+            </div>
+          </div>
+
+          <div class="project-card scrolly" data-delay="200">
+            <div class="project-card-glow"></div>
+            <div class="project-number">02</div>
+            <div class="project-badge">SDK</div>
+            <h3 class="project-title">Swift Decoder — Vision SDK & Apps</h3>
+            <p class="project-subtitle">Multi-platform Vision Solutions</p>
+            <p class="project-desc">Multi-platform Vision/Camera SDKs with barcode scanning, OCR, AR overlays, and 3D
+              dimensioning (TOF, TDM, LIDAR) for enterprise devices.</p>
+            <ul class="project-highlights">
+              <li>Deep-learning models on GPU-accelerated mobile — <strong>40% faster</strong> inference</li>
+              <li>Offline OCR & translation via MLKit, Tesseract, and PaddleOCR</li>
+              <li>Rapid customer prototypes that accelerated proof-of-concept cycles</li>
+            </ul>
+            <div class="project-tags">
+              <span>C#</span><span>C/C++</span><span>ML Kit</span><span>AR</span><span>GPU</span>
+            </div>
+          </div>
+
+          <div class="project-card scrolly" data-delay="300">
+            <div class="project-card-glow"></div>
+            <div class="project-number">03</div>
+            <div class="project-badge">Android · Side Project</div>
+            <h3 class="project-title">Reel Block</h3>
+            <p class="project-subtitle">Intelligent Distraction Manager</p>
+            <p class="project-desc">Published Android app that intelligently blocks short-video content across major
+              social media platforms using Accessibility Services.</p>
+            <ul class="project-highlights">
+              <li>Real-time activity monitoring with configurable usage limits</li>
+              <li>Analytics dashboards with freemium subscription model</li>
+            </ul>
+            <div class="project-tags">
+              <span>Android</span><span>Kotlin</span><span>Accessibility</span>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.cognitivedevs.reelblock" target="_blank"
+              rel="noopener" class="project-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Play Store
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ACHIEVEMENTS SECTION ========== -->
+    <section id="achievements" class="section achievements-section">
+      <div class="section-container">
+        <div class="section-label scrolly typewriter" data-delay="0">
+          <span class="label-number">04.</span> Key Achievements
+        </div>
+        <div class="achievements-grid">
+          <div class="achievement-card scrolly" data-delay="100">
+            <div class="achievement-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 15l-2 5l-5-1l3-4" />
+                <path d="M12 15l2 5l5-1l-3-4" />
+                <circle cx="12" cy="10" r="6" />
+                <path d="M12 7v3l2 1" />
+              </svg>
+            </div>
+            <h4>Patent Contributions</h4>
+            <p>Co-authored <strong>two patent applications</strong> and secured a trade secret at Honeywell:</p>
+            <ul class="project-highlights" style="margin-top: 8px;">
+              <li><a href="https://patents.google.com/patent/US20250371894A1/en" target="_blank" rel="noopener"
+                  style="color: var(--text-primary); transition: color 0.3s;"
+                  onmouseover="this.style.color='var(--accent-2)'"
+                  onmouseout="this.style.color='var(--text-primary)'">Systems and methods for optical character
+                  recognition using targeted regions of interest</a></li>
+              <li><a href="https://patents.google.com/patent/US20260030772A1/en" target="_blank" rel="noopener"
+                  style="color: var(--text-primary); transition: color 0.3s;"
+                  onmouseover="this.style.color='var(--accent-2)'"
+                  onmouseout="this.style.color='var(--text-primary)'">Systems and methods for box dimensioning</a></li>
+            </ul>
+          </div>
+          <div class="achievement-card scrolly" data-delay="200">
+            <div class="achievement-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                <path d="M16 7V5a4 4 0 0 0-8 0v2" />
+                <circle cx="12" cy="14" r="2" />
+              </svg>
+            </div>
+            <h4>$2M Recurring Contract</h4>
+            <p>Personally led the live demo of mobile and fixed parcel dimensioners to <strong>La Poste</strong>
+              executives in Paris — the deal closed at <strong>$2M annual recurring revenue</strong>.</p>
+          </div>
+          <div class="achievement-card scrolly" data-delay="300">
+            <div class="achievement-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <h4>NRF New York 2025</h4>
+            <p>Demonstrated <strong>Retail AI Assistant</strong> and <strong>Planogram Compliance</strong> systems at
+              the National Retail Federation show, leading to multiple enterprise pilot engagements.</p>
+          </div>
+          <div class="achievement-card scrolly" data-delay="400">
+            <div class="achievement-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 9 7 12 7s5-3 7.5-3a2.5 2.5 0 0 1 0 5H18" />
+                <path d="M6 9h12l-1 10a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2z" />
+              </svg>
+            </div>
+            <h4>Bravo Awards</h4>
+            <p>Recognized with <strong>multiple Bravo Awards</strong> for consistently delivering results and embodying
+              a growth mindset within engineering teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EDUCATION & PUBLICATIONS ========== -->
+    <section id="education" class="section education-section">
+      <div class="section-container">
+        <div class="section-label scrolly typewriter" data-delay="0">
+          <span class="label-number">05.</span> Education & Publications
+        </div>
+        <div class="edu-pub-grid">
+          <div class="edu-card scrolly" data-delay="100">
+            <div class="edu-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5" />
+              </svg>
+            </div>
+            <h4>B.Tech — Computer Science Engineering</h4>
+            <p class="edu-school">National Institute of Technology (NIT) Warangal</p>
+            <p class="edu-year">2016 — 2020 · Warangal, India</p>
+          </div>
+          <div class="pub-card scrolly" data-delay="200">
+            <div class="edu-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+              </svg>
+            </div>
+            <h4>An Improved Model for Dynamic Opinion Updates in Online Social Networks</h4>
+            <p class="edu-school">IEEE 4th Conference on Information & Communication Technology (CICT)</p>
+            <p class="edu-year">Jan 2021</p>
+            <a href="https://ieeexplore.ieee.org/document/9312115" target="_blank" rel="noopener" class="pub-link">
+              View Publication →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section id="contact" class="section contact-section">
+      <div class="section-container">
+        <div class="section-label scrolly typewriter" data-delay="0">
+          <span class="label-number">06.</span> Get In Touch
+        </div>
+        <div class="contact-content scrolly" data-delay="100">
+          <h2 class="contact-heading">Let's Build Something<br><span class="name-gradient">Amazing Together</span></h2>
+          <p class="contact-text">Whether you have a project idea, a collaboration opportunity, or just want to say
+            hello — I'd love to hear from you.</p>
+          <div class="contact-links">
+            <a href="mailto:dileep.b999@gmail.com" class="contact-card" id="contact-email">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>dileep.b999@gmail.com</span>
+            </a>
+            <a href="tel:+919189396149" class="contact-card" id="contact-phone">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+91 918 939 6149</span>
+            </a>
+            <a href="https://www.linkedin.com/in/dileep-booravilli-313a3b174" target="_blank" rel="noopener"
+              class="contact-card" id="contact-linkedin">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Designed & Built by <span class="name-gradient">Dileep Booravilli</span></p>
+      <p class="footer-year">© 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
