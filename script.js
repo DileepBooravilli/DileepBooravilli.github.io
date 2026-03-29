@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTypedTitle();
   initNavbar();
   initScrollProgress();
-  initCounters();
   initCursorTrail();
   initMobileMenu();
   initSmoothScroll();
@@ -162,46 +161,6 @@ function initScrollProgress() {
     const progress = (scrollTop / docHeight) * 100;
     bar.style.width = progress + '%';
   }, { passive: true });
-}
-
-/* ============================================================
-   ANIMATED COUNTERS
-   ============================================================ */
-function initCounters() {
-  const counters = document.querySelectorAll('.stat-number');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.dataset.count);
-        animateCounter(el, target);
-        observer.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  counters.forEach(c => observer.observe(c));
-}
-
-function animateCounter(el, target) {
-  let current = 0;
-  const duration = 2000;
-  const start = performance.now();
-
-  function update(now) {
-    const elapsed = now - start;
-    const progress = Math.min(elapsed / duration, 1);
-    // Ease out quart
-    const eased = 1 - Math.pow(1 - progress, 4);
-    current = Math.round(eased * target);
-    el.textContent = current;
-    if (progress < 1) {
-      requestAnimationFrame(update);
-    }
-  }
-
-  requestAnimationFrame(update);
 }
 
 /* ============================================================
